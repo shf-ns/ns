@@ -1,3 +1,7 @@
+:root {
+  --header-color: linear-gradient(181deg, #b1d0e2b3 0%, #e2eff64d 100%);
+}
+
 * {
   margin: 0;
   padding: 0;

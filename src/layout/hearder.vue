@@ -27,7 +27,7 @@ import { Menu } from '@/layout'
   align-items: center;
   width: 100%;
   height: 80px;
-  padding: 0 25px;
+  padding: 0 40px;
   background: var(--header-color);
 }
 
@@ -59,5 +59,11 @@ import { Menu } from '@/layout'
   align-items: center;
   gap: 15px;
   margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
 }
 </style>

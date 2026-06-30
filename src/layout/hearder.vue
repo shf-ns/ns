@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import Avatar from '@/component/avatar.vue'
+import githubLink from '@/component/githubLink.vue'
+import { Menu } from '@/layout'
 </script>
 
 <template>
   <div class="header">
     <div class="header-left">
-      <div>
+      <div class="avatar">
         <Avatar />
       </div>
       <div class="divider"></div>
-      <div>shf-ns</div>
+      <div class="name">shf-ns</div>
     </div>
     <div class="header-right">
-      <div>github</div>
-      <div>菜单</div>
+      <githubLink />
+      <Menu />
     </div>
   </div>
 </template>
@@ -24,7 +26,7 @@ import Avatar from '@/component/avatar.vue'
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 90px;
+  height: 80px;
   padding: 0 25px;
   background: var(--header-color);
 }
@@ -32,7 +34,18 @@ import Avatar from '@/component/avatar.vue'
 .header-left {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 18px;
 }
 
 .divider {
@@ -44,6 +57,7 @@ import Avatar from '@/component/avatar.vue'
 .header-right {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
+  margin-top: 10px;
 }
 </style>

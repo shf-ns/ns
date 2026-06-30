@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Header, Sidebar } from '@/layout/index'
+import { Header, Sidebar, Menu } from '@/layout/index'
 </script>
 
 <template>

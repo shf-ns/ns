@@ -3,7 +3,12 @@
 </script>
 
 <template>
-  <div>头像</div>
+  <img src="../assets/img/avatar.webp" alt="avatar">
 </template>
 
-<style scoped></style>
+<style scoped>
+img {
+  width: 100%;
+  height: 100%;
+}
+</style>

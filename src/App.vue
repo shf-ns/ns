@@ -36,7 +36,7 @@ import { Header, Sidebar, Profile, Show } from '@/layout'
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 80px;
+  margin-top: 150px;
 }
 
 @media (max-width: 768px) {

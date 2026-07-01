@@ -31,6 +31,8 @@ import githubLink from '@/component/githubLink.vue'
 
 <style scoped>
 .header {
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,8 +89,6 @@ import githubLink from '@/component/githubLink.vue'
 
 @media (max-width: 768px) {
   .header {
-    position: fixed;
-    top: 0;
     height: 70px;
     padding: 0 20px;
   }

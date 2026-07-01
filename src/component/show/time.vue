@@ -1,10 +1,34 @@
 <script setup lang="ts">
+import type { Time } from '@/types/time';
+import { useComputeTime } from '@/utils/computeTime'
+import { onMounted, onUnmounted, ref } from 'vue';
+
+const time = ref<Time>({
+  year: '',
+  month: '',
+  day: '',
+  hour: '',
+  minute: '',
+  second: '',
+})
+const timer = ref<number | undefined>(undefined);
+
+onMounted(() => {
+  timer.value = setInterval(() => {
+    time.value = useComputeTime(new Date());
+  }, 1000);
+})
+
+onUnmounted(() => {
+  clearInterval(timer.value);
+})
+
 </script>
 
 <template>
   <div class="time">
-    <p>年/月/日</p>
-    <p>时:分:秒</p>
+    <p class="time-item">{{ time.hour }}:{{ time.minute }}:{{ time.second }}</p>
+    <p class="time-item">{{ time.year }}/{{ time.month }}/{{ time.day }}</p>
   </div>
 </template>
 
@@ -19,5 +43,16 @@
   padding: 20px;
   border-radius: 10px;
   background: var(--card-color);
+}
+
+.time-item {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.time-item:nth-child(2) {
+  padding-right: 45px;
+  font-size: 18px;
+  font-weight: normal;
 }
 </style>

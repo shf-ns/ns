@@ -9,7 +9,6 @@ const talk = ref<Talk>({
 });
 onMounted(async () => {
   const data = await getTalk();
-  console.log(data.hitokoto)
   talk.value = {
     hitokoto: data.hitokoto,
     fromWho: data.from_who ? data.from_who : data.from,

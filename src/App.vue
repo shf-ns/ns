@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { Header, Sidebar, Profile, Show } from '@/layout'
+import { Header, Sidebar, Profile, Show, Menu } from '@/layout'
 
 </script>
 
 <template>
   <div class="app">
     <Header />
+    <Menu />
     <div class="main">
       <Sidebar />
       <div class="content">

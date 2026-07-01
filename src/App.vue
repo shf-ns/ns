@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Header, Sidebar } from '@/layout'
+import { Header, Sidebar, Profile, Show } from '@/layout'
 
 </script>
 
@@ -8,7 +8,10 @@ import { Header, Sidebar } from '@/layout'
     <Header />
     <div class="main">
       <Sidebar />
-      <div class="content">内容</div>
+      <div class="content">
+        <Profile />
+        <Show />
+      </div>
       <Sidebar />
     </div>
   </div>
@@ -31,5 +34,7 @@ import { Header, Sidebar } from '@/layout'
 
 .content {
   flex: 1;
+  display: flex;
+  margin-top: 80px;
 }
 </style>

@@ -15,5 +15,8 @@ import { Time, RandomTalk } from '@/component/show'
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 37px;
 }
 </style>

@@ -35,6 +35,7 @@ import { Header, Sidebar, Profile, Show } from '@/layout'
 .content {
   flex: 1;
   display: flex;
+  justify-content: center;
   gap: 20px;
   margin-top: 80px;
 }

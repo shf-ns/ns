@@ -1,10 +1,26 @@
 <script setup lang="ts">
+import { getTalk } from '@/utils/getTalk';
+import type { Talk } from '@/types/talk';
+import { onMounted, ref } from 'vue';
+
+const talk = ref<Talk>({
+  hitokoto: '',
+  fromWho: '',
+});
+onMounted(async () => {
+  const data = await getTalk();
+  console.log(data.hitokoto)
+  talk.value = {
+    hitokoto: data.hitokoto,
+    fromWho: data.from_who ? data.from_who : data.from,
+  };
+});
 </script>
 
 <template>
   <div class="random-talk">
-    <p class="talk-content">随机话内容</p>
-    <p class="talk-author">——《随机话作者》</p>
+    <p class="talk-content">{{ talk.hitokoto }}</p>
+    <p class="talk-author">——《{{ talk.fromWho }}》</p>
   </div>
 </template>
 
@@ -18,6 +34,11 @@
   padding: 20px;
   border-radius: 10px;
   background: var(--card-color);
+}
+
+.talk-content {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .talk-author {

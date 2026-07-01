@@ -38,6 +38,7 @@ import githubLink from '@/component/githubLink.vue'
   height: 80px;
   padding: 0 40px;
   background: var(--header-color);
+  backdrop-filter: blur(10px);
 }
 
 .header-left {
@@ -84,8 +85,11 @@ import githubLink from '@/component/githubLink.vue'
   fill: #a3c6da;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .header {
+    position: fixed;
+    top: 0;
+    height: 70px;
     padding: 0 20px;
   }
 }

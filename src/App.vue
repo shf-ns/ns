@@ -29,14 +29,21 @@ import { Header, Sidebar, Profile, Show } from '@/layout'
   flex: 1;
   display: flex;
   width: 100%;
-  height: 100%;
 }
 
 .content {
   flex: 1;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
   margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    margin-top: 90px;
+    gap: 0;
+  }
 }
 </style>

@@ -1,6 +1,7 @@
 :root {
   --header-color: linear-gradient(181deg, #b1d0e2b3 0%, #e2eff64d 100%);
   --card-color: radial-gradient(circle, rgba(177, 208, 226, 1) 0%, rgba(226, 239, 246, 0.6) 100%);
+  --shadow-color: 0 5px 16px -2px rgba(0, 0, 0, 0.3);
 }
 
 * {

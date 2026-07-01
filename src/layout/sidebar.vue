@@ -2,13 +2,24 @@
 </script>
 
 <template>
-  <div class="sidebar">边界</div>
+  <div class="sidebar"></div>
 </template>
 
 <style scoped>
 .sidebar {
   width: 20%;
   height: 100%;
-  background-color: #f5f5f5;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 12%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 10%;
+  }
 }
 </style>

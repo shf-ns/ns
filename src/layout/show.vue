@@ -19,4 +19,10 @@ import { Time, RandomTalk } from '@/component/show'
   width: 100%;
   margin-top: 37px;
 }
+
+@media (max-width: 768px) {
+  .show {
+    margin-bottom: 20px;
+  }
+}
 </style>

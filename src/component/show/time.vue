@@ -43,6 +43,7 @@ onUnmounted(() => {
   padding: 20px;
   border-radius: 10px;
   background: var(--card-color);
+  box-shadow: var(--shadow-color);
 }
 
 .time-item {

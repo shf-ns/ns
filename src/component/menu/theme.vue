@@ -19,7 +19,7 @@ const props = defineProps<Props>();
 
 <template>
   <div class="theme">
-    <span>主题：</span>
+    <span>{{ $t('menu.theme') }}：</span>
     <div class="theme-select">
       <svg width="20px" height="20px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <path fill="black" :style="{ fill: props.selectTheme === 'light' ? '#a3c6da' : 'black' }"

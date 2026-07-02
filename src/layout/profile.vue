@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Avatar from '@/component/avatar.vue';
-
 </script>
 
 <template>
@@ -10,9 +9,9 @@ import Avatar from '@/component/avatar.vue';
         <Avatar />
       </div>
       <div class="profile-name">shf-ns</div>
-      <h4>欢迎来到我的个人网站！</h4>
+      <p style="font-size: 15px;">{{ $t('profile.welcome') }}！</p>
     </div>
-    <p class="quote">“珍惜每一天”</p>
+    <p class="quote">{{ $t('profile.quote') }}</p>
   </div>
 </template>
 

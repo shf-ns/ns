@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Language, Theme } from '@/component/menu'
+import { setI18nLocale } from '@/i18n'
 import { useLanguageStore } from '@/stores/language'
 import { useThemeStore } from '@/stores/theme'
 import type { lang } from '@/types/language'
@@ -34,6 +35,10 @@ watch(selectTheme, (newTheme: theme) => {
   } else {
     document.documentElement.classList.remove('dark')
   }
+}, { immediate: true })
+
+watch(selectLang, (newLang: lang) => {
+  setI18nLocale(newLang)
 }, { immediate: true })
 
 </script>

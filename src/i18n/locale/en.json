@@ -1,0 +1,10 @@
+{
+  "profile": {
+    "welcome": "Welcome to my personal website!",
+    "quote": "Cherish every day"
+  },
+  "menu": {
+    "language": "language",
+    "theme": "theme"
+  }
+}

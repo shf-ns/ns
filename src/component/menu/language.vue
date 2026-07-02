@@ -18,7 +18,7 @@ const props = defineProps<Props>();
 
 <template>
   <div class="language">
-    <span>语言：</span>
+    <span>{{ $t('menu.language') }}：</span>
     <div class="language-select">
       <p :style="{ color: props.selectLang === 'zh' ? '#a3c6da' : 'black' }">zn
       </p>

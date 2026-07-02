@@ -1,6 +1,17 @@
 <script setup lang="ts">
 import Avatar from '@/component/avatar.vue'
 import githubLink from '@/component/githubLink.vue'
+import { ref } from 'vue'
+
+const emit = defineEmits<{
+  'send-message': [data: boolean];
+}>();
+
+const showMenu = ref<boolean>(false)
+const handleShowMenu = (): void => {
+  showMenu.value = !showMenu.value
+  emit('send-message', showMenu.value);
+}
 </script>
 
 <template>
@@ -14,7 +25,7 @@ import githubLink from '@/component/githubLink.vue'
     </div>
     <div class="header-right">
       <githubLink />
-      <div class="menu">
+      <div class="menu" @click="handleShowMenu">
         <svg class="icon" width="100%" height="100%" viewBox="0 0 1024 1024" version="1.1"
           xmlns="http://www.w3.org/2000/svg">
           <path fill="#8a8a8a"

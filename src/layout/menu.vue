@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { Language } from '@/component/menu'
+import { Language, Theme } from '@/component/menu'
 </script>
 
 <template>
   <ul class="menu">
-    <div class="item"></div>
+    <div class="box"></div>
     <li>
       <Language />
     </li>
-    <li>主题</li>
+    <li>
+      <Theme />
+    </li>
   </ul>
 </template>
 
@@ -21,8 +23,8 @@ import { Language } from '@/component/menu'
   flex-direction: column;
   gap: 5px;
   width: 190px;
-  height: 100px;
-  padding: 15px 10px;
+  height: 110px;
+  padding: 10px 5px;
   border-radius: 10px;
   background-color: var(--menu-color);
   box-shadow: var(--shadow-color);
@@ -30,14 +32,20 @@ import { Language } from '@/component/menu'
 
 .menu li {
   flex: 1;
+  border-radius: 5px;
+  padding: 0px 5px;
 }
 
-.item {
+.menu li:active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.box {
   position: absolute;
-  top: -10%;
-  left: 70%;
-  width: 20px;
-  height: 20px;
+  top: -7%;
+  left: 73%;
+  width: 15px;
+  height: 15px;
   transform: rotate(45deg);
   background-color: var(--menu-color);
 }
@@ -47,8 +55,8 @@ import { Language } from '@/component/menu'
     top: 65px
   }
 
-  .item {
-    left: 80%;
+  .box {
+    left: 83%;
   }
 }
 </style>

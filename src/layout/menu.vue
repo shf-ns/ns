@@ -12,7 +12,7 @@ const themeStore = useThemeStore()
 const selectLang = ref<lang>('zh')
 const selectTheme = ref<theme>('light')
 
-onMounted(() => {
+onMounted((): void => {
   selectLang.value = languageStore.getLanguage()
   languageStore.language = selectLang.value
   selectTheme.value = themeStore.getTheme()

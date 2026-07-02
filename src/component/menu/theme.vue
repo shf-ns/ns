@@ -5,7 +5,7 @@ import { onMounted, ref } from 'vue';
 const themeStore = useThemeStore()
 const themes = ref<string>('')
 
-onMounted(() => {
+onMounted((): void => {
   themes.value = themeStore.getTheme()
 })
 

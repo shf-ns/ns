@@ -7,8 +7,23 @@ const talk = ref<Talk>({
   hitokoto: '',
   fromWho: '',
 });
-onMounted(async () => {
-  const data = await getTalk();
+
+interface HitokotoResponse {
+  id: number;
+  hitokoto: string;
+  type: string;
+  from: string;
+  from_who: string;
+  creator: string;
+  creator_uid: number;
+  reviewer: number;
+  commit_from: string;
+  created_at: string;
+  length: number;
+}
+
+onMounted(async (): Promise<void> => {
+  const data: HitokotoResponse = await getTalk();
   talk.value = {
     hitokoto: data.hitokoto,
     fromWho: data.from_who ? data.from_who : data.from,

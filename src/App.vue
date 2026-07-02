@@ -13,10 +13,10 @@ const handleClickOutside = (event: MouseEvent): void => {
     showMenu.value = false;
   }
 }
-onMounted(() => {
+onMounted((): void => {
   document.addEventListener('click', handleClickOutside);
 });
-onUnmounted(() => {
+onUnmounted((): void => {
   document.removeEventListener('click', handleClickOutside);
 });
 

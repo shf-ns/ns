@@ -5,7 +5,7 @@ import { onMounted, ref } from 'vue';
 const languageStore = useLanguageStore()
 const langs = ref<string>('')
 
-onMounted(() => {
+onMounted((): void => {
   langs.value = languageStore.getLanguage()
 })
 

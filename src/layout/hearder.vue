@@ -3,7 +3,7 @@ import Avatar from '@/component/avatar.vue'
 import githubLink from '@/component/githubLink.vue'
 import { ref } from 'vue'
 
-const emit = defineEmits<{
+const emit: (evt: "send-message", data: boolean) => void = defineEmits<{
   'send-message': [data: boolean];
 }>();
 

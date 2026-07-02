@@ -13,13 +13,13 @@ const time = ref<Time>({
 })
 const timer = ref<number | undefined>(undefined);
 
-onMounted(() => {
+onMounted((): void => {
   timer.value = setInterval(() => {
     time.value = useComputeTime(new Date());
   }, 1000);
 })
 
-onUnmounted(() => {
+onUnmounted((): void => {
   clearInterval(timer.value);
 })
 

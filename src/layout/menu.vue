@@ -4,7 +4,7 @@ import { useLanguageStore } from '@/stores/language'
 import { useThemeStore } from '@/stores/theme'
 import type { lang } from '@/types/language'
 import type { theme } from '@/types/theme'
-import { onMounted, ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
 
 const languageStore = useLanguageStore()
 const themeStore = useThemeStore()
@@ -27,6 +27,15 @@ const toggleTheme = (): void => {
   themeStore.saveTheme(themeStore.theme === 'light' ? 'dark' : 'light')
   selectTheme.value = themeStore.theme
 }
+
+watch(selectTheme, (newTheme: theme) => {
+  if (newTheme === 'dark') {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}, { immediate: true })
+
 </script>
 
 <template>
@@ -53,7 +62,7 @@ const toggleTheme = (): void => {
   height: 110px;
   padding: 10px 5px;
   border-radius: 10px;
-  background-color: var(--menu-color);
+  background: var(--menu-color);
   box-shadow: var(--shadow-color);
 }
 

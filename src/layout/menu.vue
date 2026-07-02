@@ -1,12 +1,25 @@
 <script lang="ts" setup>
 import { Language, Theme } from '@/component/menu'
+import { useLanguageStore } from '@/stores/language'
+import { onMounted, ref } from 'vue'
+
+const languageStore = useLanguageStore()
+const selectLang = ref<string>('')
+
+onMounted(() => {
+  selectLang.value = languageStore.getLanguage()
+})
+const toggleLanguage = (): void => {
+  languageStore.saveLanguage(languageStore.language === 'zh' ? 'en' : 'zh')
+  selectLang.value = languageStore.language
+}
 </script>
 
 <template>
   <ul class="menu">
     <div class="box"></div>
-    <li>
-      <Language />
+    <li @click="toggleLanguage">
+      <Language :selectLang="selectLang" />
     </li>
     <li>
       <Theme />

@@ -1,10 +1,13 @@
 <script lang="ts" setup>
+import { Language } from '@/component/menu'
 </script>
 
 <template>
   <ul class="menu">
     <div class="item"></div>
-    <li>语言</li>
+    <li>
+      <Language />
+    </li>
     <li>主题</li>
   </ul>
 </template>
@@ -16,13 +19,17 @@
   right: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 5px;
   width: 190px;
-  height: 90px;
+  height: 100px;
   padding: 15px 10px;
   border-radius: 10px;
   background-color: var(--menu-color);
   box-shadow: var(--shadow-color);
+}
+
+.menu li {
+  flex: 1;
 }
 
 .item {

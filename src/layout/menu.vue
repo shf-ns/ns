@@ -1,17 +1,31 @@
 <script lang="ts" setup>
 import { Language, Theme } from '@/component/menu'
 import { useLanguageStore } from '@/stores/language'
+import { useThemeStore } from '@/stores/theme'
+import type { lang } from '@/types/language'
+import type { theme } from '@/types/theme'
 import { onMounted, ref } from 'vue'
 
 const languageStore = useLanguageStore()
-const selectLang = ref<string>('')
+const themeStore = useThemeStore()
+
+const selectLang = ref<lang>('zh')
+const selectTheme = ref<theme>('light')
 
 onMounted(() => {
   selectLang.value = languageStore.getLanguage()
+  languageStore.language = selectLang.value
+  selectTheme.value = themeStore.getTheme()
+  themeStore.theme = selectTheme.value
 })
 const toggleLanguage = (): void => {
   languageStore.saveLanguage(languageStore.language === 'zh' ? 'en' : 'zh')
   selectLang.value = languageStore.language
+}
+
+const toggleTheme = (): void => {
+  themeStore.saveTheme(themeStore.theme === 'light' ? 'dark' : 'light')
+  selectTheme.value = themeStore.theme
 }
 </script>
 
@@ -21,8 +35,8 @@ const toggleLanguage = (): void => {
     <li @click="toggleLanguage">
       <Language :selectLang="selectLang" />
     </li>
-    <li>
-      <Theme />
+    <li @click="toggleTheme">
+      <Theme :selectTheme="selectTheme" />
     </li>
   </ul>
 </template>

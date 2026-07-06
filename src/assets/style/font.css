@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'customFont';
-  src: url('../fonts/AaXiuKai-2.woff2') format('Web Open Font Format 2');
+  src: url('../fonts/AaXiuKai-2.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }

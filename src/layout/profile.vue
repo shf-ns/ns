@@ -53,9 +53,8 @@ import Avatar from '@/component/avatar.vue';
 
 .welcome {
   font-size: 18px;
+  font-weight: bold;
 }
-
-
 
 .quote {
   width: 100%;

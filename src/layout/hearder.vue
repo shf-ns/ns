@@ -69,6 +69,7 @@ const handleShowMenu = (): void => {
 
 .name {
   font-size: 18px;
+  font-weight: bold;
 }
 
 .divider {

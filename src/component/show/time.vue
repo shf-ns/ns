@@ -36,11 +36,11 @@ onUnmounted((): void => {
 .time {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: space-evenly;
   justify-content: space-evenly;
   width: 100%;
   height: 150px;
-  padding: 20px;
+  padding: 20px 20px 20px 130px;
   border-radius: 10px;
   background: var(--card-color);
   box-shadow: var(--shadow-color);
@@ -52,7 +52,6 @@ onUnmounted((): void => {
 }
 
 .time-item:nth-child(2) {
-  padding-right: 45px;
   font-size: 18px;
   font-weight: normal;
 }

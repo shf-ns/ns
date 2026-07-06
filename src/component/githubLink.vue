@@ -20,7 +20,6 @@
   transition: fill 0.3s ease-in-out;
 }
 
-.github-link:hover svg path,
 .github-link:active svg path {
   fill: #a3c6da;
 }

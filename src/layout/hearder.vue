@@ -94,7 +94,7 @@ const handleShowMenu = (): void => {
   transition: fill 0.3s ease-in-out;
 }
 
-.menu:hover svg path {
+.menu:active svg path {
   fill: #a3c6da;
 }
 

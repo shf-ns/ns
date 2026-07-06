@@ -71,7 +71,7 @@ import Avatar from '@/component/avatar.vue';
 
 @media (max-width: 768px) {
   .profile-content {
-    height: 300px;
+    height: 290px;
   }
 }
 </style>

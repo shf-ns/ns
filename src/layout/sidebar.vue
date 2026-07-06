@@ -19,7 +19,7 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 10%;
+    width: 9%;
   }
 }
 </style>

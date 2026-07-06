@@ -19,6 +19,16 @@
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, fill 0.3s ease;
+  /* 隐藏滚动条但保持滚动功能 */
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+}
+
+/* WebKit 浏览器（Chrome、Safari等）隐藏滚动条 */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 li {

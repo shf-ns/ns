@@ -20,10 +20,10 @@ const props = defineProps<Props>();
   <div class="language">
     <span>{{ $t('menu.language') }}：</span>
     <div class="language-select">
-      <p :style="{ color: props.selectLang === 'zh' ? '#a3c6da' : 'black' }">zn
+      <p :style="{ color: props.selectLang === 'zh' ? '#a3c6da' : 'black', fontSize: '19px' }">zn
       </p>
       <div class="divider"></div>
-      <p :style="{ color: props.selectLang === 'en' ? '#a3c6da' : 'black' }">en
+      <p :style="{ color: props.selectLang === 'en' ? '#a3c6da' : 'black', fontSize: '19px' }">en
       </p>
     </div>
   </div>

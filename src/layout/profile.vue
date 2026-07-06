@@ -9,7 +9,7 @@ import Avatar from '@/component/avatar.vue';
         <Avatar />
       </div>
       <div class="profile-name">shf-ns</div>
-      <p style="font-size: 15px;">{{ $t('profile.welcome') }}！</p>
+      <p class="welcome">{{ $t('profile.welcome') }}！</p>
     </div>
     <p class="quote">{{ $t('profile.quote') }}</p>
   </div>
@@ -51,6 +51,11 @@ import Avatar from '@/component/avatar.vue';
   font-weight: bold;
 }
 
+.welcome {
+  font-size: 18px;
+}
+
+
 
 .quote {
   width: 100%;
@@ -72,6 +77,10 @@ import Avatar from '@/component/avatar.vue';
 @media (max-width: 768px) {
   .profile-content {
     height: 290px;
+  }
+
+  .welcome {
+    font-size: 18px;
   }
 }
 </style>

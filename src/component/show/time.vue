@@ -55,4 +55,10 @@ onUnmounted((): void => {
   font-size: 18px;
   font-weight: normal;
 }
+
+@media (max-width: 768px) {
+  .time {
+    padding: 20px 20px 20px 100px;
+  }
+}
 </style>

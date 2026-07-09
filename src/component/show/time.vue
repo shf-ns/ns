@@ -40,7 +40,7 @@ onUnmounted((): void => {
   justify-content: space-evenly;
   width: 100%;
   height: 150px;
-  padding: 20px 20px 20px 60px;
+  padding: 20px 20px 20px 40px;
   border-radius: 10px;
   background: var(--card-color);
   box-shadow: var(--shadow-color);

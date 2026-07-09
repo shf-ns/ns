@@ -17,10 +17,11 @@
 }
 
 .github-link svg path {
-  transition: fill 0.3s ease-in-out;
+  transition: fill 0.5s ease-in-out;
 }
 
 .github-link:active svg path {
+  transition: fill 0.1s ease-in-out;
   fill: #a3c6da;
 }
 </style>

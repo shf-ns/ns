@@ -75,11 +75,11 @@ import Avatar from '@/component/avatar.vue';
 
 @media (max-width: 768px) {
   .profile-content {
-    height: 290px;
+    height: 300px;
   }
 
   .welcome {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 </style>

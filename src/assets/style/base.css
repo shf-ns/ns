@@ -7,6 +7,7 @@
 
 :root.dark {
   --bg-color: #282a36;
+  --text-color: #fff;
   --header-color: rgb(53, 64, 82, 0.6);
   --card-color: radial-gradient(circle, rgba(53, 64, 82, 0.8) 0%, rgba(88, 104, 131, 0.5) 100%);
   --menu-color: radial-gradient(circle, rgb(62, 72, 88) 0%, rgb(53, 64, 82) 100%);
@@ -24,13 +25,7 @@
   /* Firefox */
   -ms-overflow-style: none;
 
-  font-family: 'customFont';
-}
-
-/* WebKit 浏览器（Chrome、Safari等）隐藏滚动条 */
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
+  font-family: 'customFont', 'sans-serif';
 }
 
 li {
@@ -43,6 +38,13 @@ body {
   height: 100%;
   overflow: hidden;
   background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* WebKit 浏览器（Chrome、Safari等）隐藏滚动条 */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #app {

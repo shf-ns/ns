@@ -40,7 +40,7 @@ onUnmounted((): void => {
   justify-content: space-evenly;
   width: 100%;
   height: 150px;
-  padding: 20px 20px 20px 130px;
+  padding: 20px 20px 20px 60px;
   border-radius: 10px;
   background: var(--card-color);
   box-shadow: var(--shadow-color);
@@ -54,11 +54,5 @@ onUnmounted((): void => {
 .time-item:nth-child(2) {
   font-size: 18px;
   font-weight: normal;
-}
-
-@media (max-width: 768px) {
-  .time {
-    padding: 20px 20px 20px 100px;
-  }
 }
 </style>

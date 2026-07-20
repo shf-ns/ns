@@ -88,7 +88,7 @@ watch(selectLang, (newLang: lang) => {
   width: 15px;
   height: 15px;
   transform: rotate(45deg);
-  background-color: var(--menu-color);
+  background-color: var(--item-color);
 }
 
 @media (max-width: 768px) {
